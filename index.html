@@ -6,28 +6,7 @@
   <meta name="theme-color" content="#f4f1ea" />
   <title data-i18n="meta.title">Saša Mićić — Avanture i takmičenja</title>
   <meta name="description" content="Lični portfolio avantura i takmičenja." data-i18n="meta.description" data-i18n-attr="content" />
-  <link rel="stylesheet" href="styles.css?v=4" />
-  <style>
-    @media (max-width: 960px) {
-      .dropdown {
-        position: static !important;
-        transform: none !important;
-        left: auto !important;
-        right: auto !important;
-        top: auto !important;
-        width: 100% !important;
-        min-width: 0 !important;
-        max-width: 100% !important;
-      }
-      /* Override the is-open rule which has higher specificity */
-      .has-dropdown.is-open .dropdown {
-        position: static !important;
-        transform: none !important;
-        left: auto !important;
-        top: auto !important;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
@@ -189,7 +168,6 @@
               <svg viewBox="0 0 180 12"><path d="M0 6 H80 M88 6 L95 2 L102 6 M108 6 H180" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round"/></svg>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -204,11 +182,9 @@
         </header>
 
         <div class="about">
-          <figure class="about__media entry__media--video" data-lightbox-item data-gallery="about" data-type="video" data-src="assets/o-meni.MOV">
-            <video preload="metadata" muted playsinline>
-              <source src="assets/o-meni.MOV#t=0.5" type="video/mp4" />
-            </video>
-            <span class="video-poster__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5 L19 12 L8 19 Z" fill="currentColor"/></svg></span>
+          <figure class="about__media" data-lightbox-item data-gallery="about" data-type="image">
+            <img src="assets/o-meni.jpg" alt="Saša Mićić" loading="lazy"
+                 onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'media-placeholder',textContent:'Dodaj: assets/o-meni.jpg'}))" />
           </figure>
           <div class="about__text prose">
             <p data-i18n="about.p1">
@@ -363,7 +339,7 @@
 
           <div class="race__body">
             <div class="entry__grid">
-              <figure class="entry__media entry__media--portrait-img" data-lightbox-item data-gallery="invictus" data-type="image">
+              <figure class="entry__media" data-lightbox-item data-gallery="invictus" data-type="image">
                 <img src="assets/invictus-par.JPG" alt="Invictus" loading="lazy" />
               </figure>
               <div class="entry__text prose">
@@ -403,23 +379,22 @@
           </header>
 
           <div class="race__body">
-            <div class="entry__grid entry__grid--portrait-left">
-              <figure class="entry__media entry__media--portrait-img" data-lightbox-item data-gallery="avala" data-type="image">
+            <div class="entry__grid">
+              <figure class="entry__media entry__media--empty" data-lightbox-item data-gallery="avala" data-type="image">
                 <img src="assets/avalatrail-glavna.jpg" alt="Avala Trail" loading="lazy"
                      onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'media-placeholder',textContent:'Glavna slika stiže — assets/avalatrail-glavna.jpg'}))" />
               </figure>
-              <div class="entry__col-right">
-                <div class="entry__text prose">
-                  <p data-i18n="race.avala.p1">
-                    Pasus o Avala Trail trci. Slike i snimci dolaze uskoro.
-                  </p>
-                </div>
-                <figure class="medal" data-lightbox-item data-gallery="medals" data-type="image">
-                  <img src="assets/avala-trail-medalja.jpeg" alt="Medalja Avala Trail" loading="lazy"
-                       onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'media-placeholder media-placeholder--medal',textContent:'assets/avala-trail-medalja.jpeg'}))" />
-                </figure>
+              <div class="entry__text prose">
+                <p data-i18n="race.avala.p1">
+                  Pasus o Avala Trail trci. Slike i snimci dolaze uskoro.
+                </p>
               </div>
             </div>
+
+            <figure class="medal" data-lightbox-item data-gallery="medals" data-type="image">
+              <img src="assets/avala-trail-medalja.jpeg" alt="Medalja Avala Trail" loading="lazy"
+                   onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'media-placeholder media-placeholder--medal',textContent:'assets/avala-trail-medalja.jpeg'}))" />
+            </figure>
           </div>
         </article>
 
@@ -616,10 +591,7 @@
         <article class="entry" id="midzor">
           <header class="entry__head">
             <h3 class="entry__title" data-i18n="adv.midzor.title">Midžor</h3>
-            <div class="race__meta">
-              <span class="race__year">2026</span>
-              <span class="entry__tag" data-i18n="adv.midzor.tag">Stara planina · 2169 m</span>
-            </div>
+            <span class="entry__tag" data-i18n="adv.midzor.tag">Stara planina · 2169 m</span>
           </header>
 
           <div class="entry__grid entry__grid--video-lead">
@@ -656,10 +628,7 @@
         <article class="entry" id="rtanj">
           <header class="entry__head">
             <h3 class="entry__title" data-i18n="adv.rtanj.title">Rtanj</h3>
-            <div class="race__meta">
-              <span class="race__year">2026</span>
-              <span class="entry__tag" data-i18n="adv.rtanj.tag">Šiljak · 1565 m</span>
-            </div>
+            <span class="entry__tag" data-i18n="adv.rtanj.tag">Šiljak · 1565 m</span>
           </header>
 
           <div class="entry__grid">
@@ -698,18 +667,12 @@
         <article class="entry" id="gradac">
           <header class="entry__head">
             <h3 class="entry__title" data-i18n="adv.gradac.title">Gradac</h3>
-            <div class="race__meta">
-              <span class="race__year">2026</span>
-              <span class="entry__tag" data-i18n="adv.gradac.tag">Sićevačka klisura</span>
-            </div>
+            <span class="entry__tag" data-i18n="adv.gradac.tag">Sićevačka klisura</span>
           </header>
 
-          <div class="entry__grid entry__grid--video-lead">
-            <figure class="entry__media entry__media--video" data-lightbox-item data-gallery="gradac" data-type="video" data-src="assets/gradac-vrh-novi.mp4">
-              <video preload="metadata" muted playsinline>
-                <source src="assets/gradac-vrh-novi.mp4#t=0.5" type="video/mp4" />
-              </video>
-              <span class="video-poster__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5 L19 12 L8 19 Z" fill="currentColor"/></svg></span>
+          <div class="entry__grid">
+            <figure class="entry__media" data-lightbox-item data-gallery="gradac" data-type="image">
+              <img src="assets/gradac-pogled.jpeg" alt="Gradac — pogled" loading="lazy" />
             </figure>
             <div class="entry__text prose">
               <p data-i18n="adv.gradac.p1">
@@ -720,10 +683,13 @@
 
           <div class="grid-2">
             <figure class="entry__media" data-lightbox-item data-gallery="gradac" data-type="image">
-              <img src="assets/gradac-pogled.jpeg" alt="Gradac — pogled" loading="lazy" />
-            </figure>
-            <figure class="entry__media" data-lightbox-item data-gallery="gradac" data-type="image">
               <img src="assets/gradac-sicevopored.jpeg" alt="Sićevačka klisura" loading="lazy" />
+            </figure>
+            <figure class="entry__media entry__media--video" data-lightbox-item data-gallery="gradac" data-type="video" data-src="assets/gradac-vrh-novi.mp4">
+              <video preload="metadata" muted playsinline>
+                <source src="assets/gradac-vrh-novi.mp4#t=0.5" type="video/mp4" />
+              </video>
+              <span class="video-poster__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5 L19 12 L8 19 Z" fill="currentColor"/></svg></span>
             </figure>
           </div>
         </article>
@@ -732,10 +698,7 @@
         <article class="entry" id="rafting">
           <header class="entry__head">
             <h3 class="entry__title" data-i18n="adv.rafting.title">Rafting</h3>
-            <div class="race__meta">
-              <span class="race__year">2025</span>
-              <span class="entry__tag" data-i18n="adv.rafting.tag">divlje vode · ekipno</span>
-            </div>
+            <span class="entry__tag" data-i18n="adv.rafting.tag">divlje vode · ekipno</span>
           </header>
 
           <div class="entry__grid">
@@ -750,13 +713,10 @@
           </div>
 
           <div class="grid-2">
-            <figure class="entry__media entry__media--video media-fixed" data-lightbox-item data-gallery="rafting" data-type="video" data-src="assets/rafting-ekipa.mp4">
-              <video preload="metadata" muted playsinline>
-                <source src="assets/rafting-ekipa.mp4#t=0.5" type="video/mp4" />
-              </video>
-              <span class="video-poster__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5 L19 12 L8 19 Z" fill="currentColor"/></svg></span>
+            <figure class="entry__media" data-lightbox-item data-gallery="rafting" data-type="image">
+              <img src="assets/rafting-ekipa.JPG" alt="" loading="lazy" />
             </figure>
-            <figure class="entry__media entry__media--video media-fixed" data-lightbox-item data-gallery="rafting" data-type="video" data-src="assets/rafting-izeditovan1.mp4">
+            <figure class="entry__media entry__media--video" data-lightbox-item data-gallery="rafting" data-type="video" data-src="assets/rafting-izeditovan1.mp4">
               <video preload="metadata" muted playsinline>
                 <source src="assets/rafting-izeditovan1.mp4#t=0.5" type="video/mp4" />
               </video>
@@ -765,30 +725,26 @@
           </div>
 
           <div class="grid-2">
-            <figure class="entry__media entry__media--video media-fixed" data-lightbox-item data-gallery="rafting" data-type="video" data-src="assets/rafting-izeditovan2.mp4">
+            <figure class="entry__media entry__media--video" data-lightbox-item data-gallery="rafting" data-type="video" data-src="assets/rafring-izeditovan2.mp4">
               <video preload="metadata" muted playsinline>
-                <source src="assets/rafting-izeditovan2.mp4#t=0.5" type="video/mp4" />
+                <source src="assets/rafring-izeditovan2.mp4#t=0.5" type="video/mp4" />
               </video>
               <span class="video-poster__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5 L19 12 L8 19 Z" fill="currentColor"/></svg></span>
             </figure>
-            <figure class="entry__media entry__media--video media-fixed" data-lightbox-item data-gallery="rafting" data-type="video" data-src="assets/rafting-skok.mp4">
+            <figure class="entry__media entry__media--video" data-lightbox-item data-gallery="rafting" data-type="video" data-src="assets/rafting-skok.MOV">
               <video preload="metadata" muted playsinline>
-                <source src="assets/rafting-skok.mp4#t=0.5" type="video/mp4" />
+                <source src="assets/rafting-skok.MOV#t=0.5" type="video/mp4" />
               </video>
               <span class="video-poster__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5 L19 12 L8 19 Z" fill="currentColor"/></svg></span>
             </figure>
           </div>
-
         </article>
 
         <!-- KAJAKING -->
         <article class="entry" id="kajaking">
           <header class="entry__head">
             <h3 class="entry__title" data-i18n="adv.kajak.title">Kajaking</h3>
-            <div class="race__meta">
-              <span class="race__year">2025</span>
-              <span class="entry__tag" data-i18n="adv.kajak.tag">mirne vode · solo</span>
-            </div>
+            <span class="entry__tag" data-i18n="adv.kajak.tag">mirne vode · solo</span>
           </header>
 
           <div class="entry__grid">
@@ -804,16 +760,15 @@
 
           <div class="grid-2">
             <figure class="entry__media" data-lightbox-item data-gallery="kajak" data-type="image">
-              <img src="assets/kajaking-par2.jpg" alt="Kajaking — par 2" loading="lazy" />
+              <img src="assets/kajaking-par2.jpg" alt="" loading="lazy" />
             </figure>
-            <figure class="entry__media entry__media--video entry__media--video-wide-thumb" data-lightbox-item data-gallery="kajak" data-type="video" data-src="assets/kajaking-divsv.mp4">
+            <figure class="entry__media entry__media--video" data-lightbox-item data-gallery="kajak" data-type="video" data-src="assets/kajaking-divsv.MOV">
               <video preload="metadata" muted playsinline>
-                <source src="assets/kajaking-divsv.mp4#t=0.5" type="video/mp4" />
+                <source src="assets/kajaking-divsv.MOV#t=0.5" type="video/mp4" />
               </video>
               <span class="video-poster__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5 L19 12 L8 19 Z" fill="currentColor"/></svg></span>
             </figure>
           </div>
-
         </article>
 
       </div>
